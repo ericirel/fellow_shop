@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FellowShop</title>
+  <title>Fellow Shop</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+	<header>
+	<% if current_user %>
+	  <p>Waddup <%= current_user.username %>!? |
+	    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+	  </p>
+	<% else %>
+		<%= link_to 'sign in', new_user_session_path %> |
+		<%= link_to 'sign up', new_user_registration_path %>
+	<% end %>
+	<hr>
+	</header>
+		<p class="notice"><%= notice %></p>
+    	<p class="alert"><%= alert %></p>
 <%= yield %>
 
 </body>

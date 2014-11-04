@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 	end
 
 	def edit
+		set_user
 	end
 
 	def show
@@ -42,10 +43,12 @@ private
 		@user = User.find(params[:id])
 
 	end
+
+	def subscribe
+  		@user = User.find(params[:id])
+  		@user.subscribe_to_mailchimp(true)
+  		# redirect to some other url
+	end
 end
 
-def subscribe
-  @user = User.find(params[:id])
-  @user.subscribe_to_mailchimp(true)
-  # redirect to some other url
-end
+

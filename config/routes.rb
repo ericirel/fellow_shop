@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
-  devise_scope :sessions do 
+  devise_scope :sessions do
     get "users/sign_out", to: "home#index"
   end
 
   devise_for :users, :controllers => { :registrations => "registrations" }
 
+  resources :users
+  resources :jobs
   resources :users do
     get 'my_profile'
   end

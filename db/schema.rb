@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 0) do
-=======
-ActiveRecord::Schema.define(version: 20141104172035) do
+ActiveRecord::Schema.define(version: 20141104174506) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -33,10 +30,13 @@ ActiveRecord::Schema.define(version: 20141104172035) do
     t.string   "lname"
     t.string   "location"
     t.string   "username"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
->>>>>>> b1dcac64e04de87016add1ff822caa6fcf3dfaf7
 
 end

@@ -10,7 +10,6 @@ class UsersController < ApplicationController
 	end
 
 	def show
-
 	end
 
 	def update
@@ -29,10 +28,6 @@ class UsersController < ApplicationController
 
 	def destroy
 		redirect_to destroy_user_session_path
-
-	end
-
-	def my_profile
 
 	end
 

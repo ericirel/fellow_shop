@@ -176,10 +176,9 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   forem!
-<<<<<<< HEAD
+
   gibbon
-=======
->>>>>>> e82683b02157ec7817185e27f062d1b638854fd2
+
   jbuilder (~> 2.0)
   jquery-rails
   kaminari (= 0.15.1)

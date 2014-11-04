@@ -1,0 +1,11 @@
+<%= form_for @job do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %><br />
+<%= f.label :skills %>
+<%= f.text_field :skills %><br />
+<%= f.label :description %>
+<%= f.text_area :description %><br />
+<%= f.label :budget %>
+<%= f.text_field :budget %><br />
+<%= f.submit %>
+<% end %>

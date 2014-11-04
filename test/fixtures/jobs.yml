@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  skills: MyString
+  description: MyText
+  budget: 1.5
+
+two:
+  title: MyString
+  skills: MyString
+  description: MyText
+  budget: 1.5

@@ -1,3 +1,19 @@
+GIT
+  remote: git://github.com/radar/forem.git
+  revision: 8b4999af3c702603414f6ba9efc1848a0cdb6dbe
+  branch: rails4
+  specs:
+    forem (1.0.0.beta1)
+      cancancan (~> 1.7)
+      decorators (~> 1.0.2)
+      friendly_id (~> 5.0.0)
+      gemoji (= 2.1.0)
+      rails (>= 4.0.3, <= 4.1.6)
+      sanitize (= 2.0.6)
+      select2-rails (~> 3.5.4)
+      simple_form (~> 3.0.1)
+      workflow (= 1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,6 +46,7 @@ GEM
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     builder (3.2.2)
+    cancancan (1.9.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -37,6 +54,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    decorators (1.0.3)
+      railties (>= 3.0.19, != 3.2.9, != 3.2.8, != 3.2.7, != 3.2.6, != 3.2.5, != 3.2.4, != 3.2.3, != 3.2.2, != 3.2.10, != 3.2.1, != 3.2.0, != 3.1.9, != 3.1.8, != 3.1.7, != 3.1.6, != 3.1.5, != 3.1.4, != 3.1.3, != 3.1.2, != 3.1.1, != 3.1.0)
     devise (3.4.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -46,6 +65,9 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.2)
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
+    gemoji (2.1.0)
     hike (1.2.3)
     i18n (0.6.11)
     jbuilder (2.2.4)
@@ -55,11 +77,17 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    kaminari (0.15.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
+    mini_portile (0.6.0)
     minitest (5.4.2)
     multi_json (1.10.1)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
     orm_adapter (0.5.0)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -82,6 +110,8 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    sanitize (2.0.6)
+      nokogiri (>= 1.4.4)
     responders (1.1.1)
       railties (>= 3.2, < 4.2)
     sass (3.2.19)
@@ -93,6 +123,11 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    select2-rails (3.5.9.1)
+      thor (~> 0.14)
+    simple_form (3.0.2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     spring (1.1.3)
     sprockets (2.11.3)
       hike (~> 1.2)
@@ -114,6 +149,7 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    workflow (1.0.0)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -122,9 +158,11 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  forem!
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari (= 0.15.1)
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

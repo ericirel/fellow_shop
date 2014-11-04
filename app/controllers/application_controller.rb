@@ -7,10 +7,6 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def after_sign_out_path_for 
-		root_path
-	end
-
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << :username
   end

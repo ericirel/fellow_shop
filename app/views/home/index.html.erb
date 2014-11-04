@@ -1,1 +1,10 @@
 <h1>Hello World</h1>
+
+<% if current_user %>
+  <p>Waddup <%= current_user.username %> |
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+  </p>
+<% else %>
+<%= link_to 'sign in', new_user_session_path %> |
+<%= link_to 'sign up', new_user_registration_path %>
+<% end %>

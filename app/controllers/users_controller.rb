@@ -2,12 +2,25 @@ class UsersController < ApplicationController
 
 	before_action :authenticate_user!
 
-	def edit
+	def index
+		@user = User.all
+	end
 
+	def edit
 	end
 
 	def show
 
+	end
+
+	def update
+		if @user.update(user_params)
+			flash[:notice] = "Profile updated"
+			redirect_to @user
+		else
+			flash[:alert] = "There was a problem"
+			render :edit
+		end
 	end
 
 	def create
@@ -16,6 +29,10 @@ class UsersController < ApplicationController
 
 	def destroy
 		redirect_to destroy_user_session_path
+
+	end
+
+	def my_profile
 
 	end
 

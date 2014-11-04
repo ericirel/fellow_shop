@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
 	after_create :subscribe_to_mailchimp
 
-	  def subscribe_to_mailchimp(optin = false)
+	  def subscribe_to_mailchimp(optin = true)
 	    response = $mailchimp.lists.subscribe({
 	       id: 'c44e33f10c',
 	       email: {email: self.email},

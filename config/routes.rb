@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :jobs
+  resources :tags
   resources :users do
     get 'my_profile'
   end

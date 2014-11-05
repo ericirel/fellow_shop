@@ -41,19 +41,19 @@
 
 
 div {
-	border: 1px solid white;
+	border: 1px solid black;
 }
 
 /* unvisited link */
 a:link {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 /* visited link */
 a:visited {
     text-decoration: none;
-        color: white;	
+        color: black;	
 }
 
 /* mouse over link */
@@ -72,23 +72,20 @@ body {
     background-attachment: fixed;
     background-position: 40% 40%; 
     background-repeat: no-repeat;
-    background-color: #040202;
-    color: white;
+    background-color: white;
+    color: black;
   
 }
 
 body.homepage {
-   
     background-image: url("NYCDA-logo-large-web3.png");
     background-size: 80%;
     background-attachment: fixed;
     background-position: 40% 40%; 
     background-repeat: no-repeat;
-    background-color: #040202;
+    background-color: #FFFFFF;
   
 }
-
-
 
 
 

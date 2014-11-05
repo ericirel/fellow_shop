@@ -8,4 +8,19 @@
   <% end %>
 </ul>
 
+<h1>Jobs tagged with <%= @tag.name %></h1>
+
+<ul>
+  <% @tag.jobs.each do |job| %>
+    <li><%= link_to job.title, job_path(job) %></li>
+  <% end %>
+</ul>
+
 <%= link_to "Create a New Job posting", new_job_path, class: "new_job" %>
+
+<%= form_tag jobs_path, :method => 'get' do %>
+<p>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %>
+</p>
+<% end %>

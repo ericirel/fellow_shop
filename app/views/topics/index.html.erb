@@ -1,0 +1,25 @@
+<h1>Topic Feed</h1>
+
+<ul>
+<% @topic.each do |topic| %>
+
+	<li><%= topic.body %></li>
+
+    <% topic.posts.each do |post| %><br/>
+      
+      <li>
+        <%= post.body %>
+      </li>
+      <br/>
+    
+  <%end%>
+  
+  <%= form_for Post.new, url: topic_posts_path(topic.id) do |f| %>
+    <%= f.label :body %>
+    <%= f.text_field :body %> 
+    <%= f.submit "Post" %>
+  <% end %> 
+  
+
+<%end%>
+</ul>

@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   resources :users
   resources :jobs
   resources :tags
-  resources :users do
-    get 'my_profile'
+  resources :users
+ 
+  resources :topics do
+    resources :posts, except: [:index, :show]
   end
 
   root 'home#index'

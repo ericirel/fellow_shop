@@ -19,6 +19,17 @@ font-family: 'Rajdhani', sans-serif;
 }
 
 
+body.homepage {
+   
+    background-image: url("NYCDA-logo-large-web3.png");
+    background-size: 80%;
+    background-attachment: fixed;
+    background-position: 40% 40%; 
+    background-repeat: no-repeat;
+    background-color: #040202;
+  
+}
+
 .logged_in {
 	color: white;
 	font-size: .85em;

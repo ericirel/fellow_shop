@@ -5,9 +5,10 @@
 
 .p-header {
 	color: white;
-	font-size: 200%;
+	font-size: 100%;
 	align-text: left;
 	z-index: 3;
+	font-size: 2.5vw;
 }
 
 .div-header {
@@ -18,9 +19,11 @@
 	margin-top: 10px;
 	margin-left: 8%;
 	padding-left: 2%;
-	width: 450px;
+	width: 35%;
 	position: fixed;
 	border-radius: 25px;
+	margin-bottom: 200px;
+	display: inline;
 }
 
 .who-are {
@@ -28,11 +31,12 @@
 	opacity: .7;
 	z-index: -1;
 	color: white;
-	margin-top: 470px;
+	margin-top: 30%;
 	margin-left: 10%;
 	padding-left: 2%;
-	width: 350px;
+	width: 35%;
 	border-radius: 25px;
+	font-size: 1.5vw;
 }
 
 
@@ -62,9 +66,18 @@ a:active {
     text-decoration: underline;
 }
 
+body.none {
+   
+    background-size: 80%;
+    background-attachment: fixed;
+    background-position: 40% 40%; 
+    background-repeat: no-repeat;
+    background-color: #040202;
+  
+}
 
-body {
-    
+body.homepage {
+   
     background-image: url("NYCDA-logo-large-web3.png");
     background-size: 80%;
     background-attachment: fixed;
@@ -72,6 +85,9 @@ body {
     background-repeat: no-repeat;
     background-color: #040202;
   
-
-
 }
+
+
+
+
+

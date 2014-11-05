@@ -2,4 +2,10 @@
 <p><%= @job.skills %></p>
 <p><%= @job.description %></p>
 <p><%= @job.budget %></p>
+<p>
+  Tags:
+  <% @job.tags.each do |tag| %>
+  <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
+</p>
 <%= link_to ">> Job list", jobs_path %>

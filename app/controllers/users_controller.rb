@@ -35,20 +35,18 @@ class UsersController < ApplicationController
 private
 
 	def user_params
-  		params.require(:user).permit(:fname,
-  							:lname, :email, :password, :location, :tag_list)
+  		params.require(:user).permit(:username, :fname,
+  							:lname, :email, :password, :location,)
 	end
 
 	def set_user
 		@user = User.find(params[:id])
 
 	end
-
-	def subscribe
-  		@user = User.find(params[:id])
-  		@user.subscribe_to_mailchimp(true)
-  		# redirect to some other url
-	end
 end
 
-
+def subscribe
+  @user = User.find(params[:id])
+  @user.subscribe_to_mailchimp(true)
+  # redirect to some other url
+end

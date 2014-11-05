@@ -8,15 +8,20 @@
 </head>
 
 <body>
+	
 	<header>
+
 	<% if current_user %>
-	  <p>Waddup <%= current_user.username %>!? |
+	  <p class="logged_in">Waddup <%= current_user.username %>!? |
 	    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
 	  </p>
 	<% else %>
+		<p class="logged_in">
 		<%= link_to 'sign in', new_user_session_path %> |
 		<%= link_to 'sign up', new_user_registration_path %>
+		</p>
 	<% end %>
+	
 	<hr>
 	</header>
 		<p class="notice"><%= notice %></p>
@@ -24,4 +29,5 @@
 <%= yield %>
 
 </body>
+
 </html>

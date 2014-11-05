@@ -1,3 +1,77 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.p-header {
+	color: white;
+	font-size: 200%;
+	align-text: left;
+	z-index: 3;
+}
+
+.div-header {
+	background-color: black;
+	opacity: .7;
+	z-index: -1;
+	color: white;
+	margin-top: 10px;
+	margin-left: 8%;
+	padding-left: 2%;
+	width: 450px;
+	position: fixed;
+	border-radius: 25px;
+}
+
+.who-are {
+	background-color: black;
+	opacity: .7;
+	z-index: -1;
+	color: white;
+	margin-top: 470px;
+	margin-left: 10%;
+	padding-left: 2%;
+	width: 350px;
+	border-radius: 25px;
+}
+
+
+div {
+	border: 1px solid white;
+}
+
+/* unvisited link */
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    text-decoration: none;
+        color: white;	
+}
+
+/* mouse over link */
+a:hover {
+    text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+    text-decoration: underline;
+}
+
+
+body {
+    
+    background-image: url("NYCDA-logo-large-web3.png");
+    background-size: 80%;
+    background-attachment: fixed;
+    background-position: 40% 40%; 
+    background-repeat: no-repeat;
+    background-color: #040202;
+  
+
+
+}

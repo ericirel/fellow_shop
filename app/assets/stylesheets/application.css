@@ -43,7 +43,7 @@
 .log_in {
 	margin-top: 20%;
 	color: white;
-	font-size: .85em;
+	font-size: 1em;
 	text-align: center;
 	background-color: rgba(1,1,1,  .5);
 
@@ -67,11 +67,31 @@
 .sign_up {
 	margin-top: 25%;
 	color: white;
-	font-size: .85em;
+	font-size: 1em;
 	text-align: center;
 	background-color: rgba(1,1,1,  .5);
 
 	width: 30%;
     margin: 0 auto;
 	border-radius: 25px;
+}
+
+.nav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+    width:33%;
+    margin:10%;
+    padding:0;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+
 }

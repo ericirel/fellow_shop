@@ -22,11 +22,25 @@
 		<%= link_to 'sign up', new_user_registration_path %>
 		</p>
 	<% end %>
-	
-	<!-- <hr> -->
-	</header>
 		<p class="notice"><%= notice %></p>
     	<p class="alert"><%= alert %></p>
+	<!-- <hr> -->
+	
+	<% if !current_page?('/') && current_user %>
+
+	<nav class="nav">
+		<ul>
+			<li><%= link_to 'My Profile', user_path(current_user) %></li>
+			<li><%= link_to 'Jobs', jobs_path %></li>
+			<li><%= link_to 'Forum', topics_path %></li>
+		</ul>
+	</nav>
+	
+	<% end %>
+
+
+	</header>
+
 <%= yield %>
 
 </body>

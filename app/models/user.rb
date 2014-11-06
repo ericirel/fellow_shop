@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-           has_many :jobs   
+
+  has_many :jobs
 
 	after_create :subscribe_to_mailchimp
 
@@ -20,20 +21,23 @@ class User < ActiveRecord::Base
 	    response = $mailchimp.lists.unsubscribe({
 	       id: 'c44e33f10c',
 	       email: {email: self.email},
-	       :delete_member => false, 
+	       :delete_member => false,
 	       :send_notify => notify
 	    })
 	end
 
+  private
 
+    def subscribe_to_list
+        Resque.enqueue(MailchimpSubscriber, self.id)
+    end
 
-	# private
- #    def subscribe_to_list
- #        Resque.enqueue(MailchimpSubscriber, self.id)
- #    end
-  
 
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+<<<<<<< HEAD
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/       
+=======
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+>>>>>>> 9320acf82539915a4d8a120ce106b8da1d7533b7
 
 end

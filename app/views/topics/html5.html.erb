@@ -1,7 +1,11 @@
 <div class="container">
-<h1>Create a new Topic!</h1>
+<h1>Edit your topic here!</h1>
 
-<%= render 'form' %>
+<%= form_for @post do |f| %>
 
+  <%= f.label :body %>
+  <%= f.text_area :body %> <br />
+  <%= f.submit %>
+<% end %>
 
 </div>

@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     get "users/sign_out", to: "home#index"
   end
 
+  # devise_scope :sessions do
+  #   get "users/sign_in", to: 'users#show'
+  # end
+
   devise_for :users, :controllers => { :registrations => "registrations" }
 
   resources :users

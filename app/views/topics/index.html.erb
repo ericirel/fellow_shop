@@ -15,7 +15,7 @@
   <%end%>
   
   <%= form_for Post.new, url: topic_posts_path(topic.id) do |f| %>
-    <%= f.label :body %>
+  
     <%= f.text_field :body %> 
     <%= f.submit "Post" %>
   <% end %> 

@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 	end
 
 	def update
-		if @user.update(user_params)
+		if @user.update(new_params)
 			flash[:notice] = "Profile updated"
 			redirect_to @user
 		else
@@ -33,6 +33,11 @@ class UsersController < ApplicationController
 	end
 
 private
+
+	def new_params
+		params.require(:user).permit(:username, :fname, :avatar, :avatar,
+  							:lname, :email, :password, :location,)
+	end
 
 	def user_params
   		params.require(:user).permit(:username, :fname,

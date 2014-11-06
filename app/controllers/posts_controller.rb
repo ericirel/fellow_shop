@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
 	  before_action :set_post, only: [:show, :edit, :update, :destroy, :new]
 
-	  def new
-	  	@post = Post.new
-	  end
+	def new
+	  @post = Post.new
+	end
 
   def create
     @post = Post.new

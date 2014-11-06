@@ -2,6 +2,8 @@ class JobsController < ApplicationController
 
   def index
     @jobs = Job.all
+    @jobs = Job.search(params[:search])
+    @tags = Tag.search(params[:search])
   end
 
   def show

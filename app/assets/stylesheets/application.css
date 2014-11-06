@@ -15,14 +15,15 @@
  */
 
 * {
-font-family: 'Rajdhani', sans-serif;
+	  font-family: 'Julius Sans One', sans-serif;
+/*font-family: 'Rajdhani', sans-serif;*/
 }
 
 
 
 .logged_in {
-	color: black;
-	font-size: .85em;
+	color: white;
+	font-size: 1.5vw;
 	text-align: right;
 	padding-right: 2%;
 
@@ -41,11 +42,11 @@ font-family: 'Rajdhani', sans-serif;
 /*Log in CSS*/
 .log_in {
 	margin-top: 20%;
-	color: black;
+	color: white;
 	font-size: .85em;
 	text-align: center;
-	background-color: aquamarine;
-	opacity: .9;
+	background-color: rgba(1,1,1,  .5);
+
 	width: 30%;
     margin: 0 auto;
 	border-radius: 25px;
@@ -65,11 +66,11 @@ font-family: 'Rajdhani', sans-serif;
 /*Log in CSS*/
 .sign_up {
 	margin-top: 25%;
-	color: black;
+	color: white;
 	font-size: .85em;
 	text-align: center;
-	background-color: aquamarine;
-	opacity: .9;
+	background-color: rgba(1,1,1,  .5);
+
 	width: 30%;
     margin: 0 auto;
 	border-radius: 25px;

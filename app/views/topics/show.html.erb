@@ -1,2 +1,6 @@
 <h1>Welcome to the <%= @topic.body %> board.</h1>
 <p>Topic by <%= @topic.user.fname %></p>
+
+<% @topic.posts.each do |post| %>
+
+<% end %>

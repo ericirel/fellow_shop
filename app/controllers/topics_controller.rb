@@ -1,13 +1,13 @@
 class TopicsController < ApplicationController
 
-	  before_action :set_topic, only: [:show, :edit, :update, :destroy]
+	  before_action :set_topic, only: [:edit, :update, :destroy]
 
   def index
     @topic = Topic.all
   end
 
   def show
-    
+    @topic = Topic.find_by_body(params[:id])
   end
 
   def new
@@ -34,10 +34,9 @@ class TopicsController < ApplicationController
   def update
     if @topic.update(topic_params)
       flash[:notice] = "Topic updated!"
-      redirect_to @topic
+      redirect_to :back
     else
       flash[:alert] = "Something went wrong with the update."
-      render :edit
     end
   end
 

@@ -15,12 +15,8 @@ class UsersController < ApplicationController
 	end
 
 	def update
-<<<<<<< HEAD
-		if @user.update(new_params)
-=======
-		@user = User.find(params[:id])
+		@user = User.find(params[:id]
 		if @user.update(user_params)
->>>>>>> 9320acf82539915a4d8a120ce106b8da1d7533b7
 			flash[:notice] = "Profile updated"
 			redirect_to current_user
 		else
@@ -40,14 +36,9 @@ class UsersController < ApplicationController
 
 private
 
-	def new_params
-		params.require(:user).permit(:username, :fname, :avatar, :avatar,
-  							:lname, :email, :password, :location,)
-	end
-
 	def user_params
   		params.require(:user).permit(:avatar, :github_link, :username, :fname,
-  							:lname, :email, :password, :location, :password_confirmation, :current_password)
+  							:lname, :email, :password, :location)
 	end
 
 	def set_user

@@ -22,13 +22,13 @@
 
 
 * {
-	  font-family: sans-serif;
-/*font-family: 'Rajdhani', sans-serif;*/
+	/*font-family: sans-serif;*/
+	font-family: 'Lora', serif;	
 }
 
 .logged_in {
 	color: white;
-	font-size: 1.5vw;
+	font-size: 1.25vw;
 	text-align: right;
 	padding-right: 2%;
   text-decoration: none;
@@ -96,9 +96,20 @@
     margin:10%;
     padding:0;
     font-size: 1.5vw;
+
 }
 .nav a{
     display:inline-block;
     padding:10px;
+	  font-family: 'Lora', serif;
+	  font-weight: 200;
+}
+
+.container {
+	background-color: rgba(255,255,255,  .75);
+	color: black;
+	width: 80%;
+	margin-left: 5%;
+	margin-right: 5%;
 
 }

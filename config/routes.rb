@@ -4,9 +4,6 @@ Rails.application.routes.draw do
     get "users/sign_out", to: "home#index"
   end
 
-  # devise_scope :sessions do
-  #   get "users/sign_in", to: 'users#show'
-  # end
 
   devise_for :users, :controllers => { :registrations => "registrations" }
 
@@ -14,10 +11,14 @@ Rails.application.routes.draw do
   resources :jobs
   resources :tags
   resources :users
- 
+
+  get 'topics/html5'
+
   resources :topics do
     resources :posts, except: [:index, :show]
   end
+
+
 
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

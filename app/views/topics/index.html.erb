@@ -1,9 +1,12 @@
 <div id="title"><h1>Topic Feed</h1></div>
 
 <div id="main">
-<div class="div">
-  <div id="pic1"><%= image_tag "html5.png" %></div>
-</div>
+  <%= link_to topics_html5_path do %>
+    <div class="div">
+      <div id="pic1"><%= image_tag "html5.png" %></div>
+    </div>
+  <%end%>
+
 <div class="div">
   <div id="pic2"><%= image_tag "css3.png" %></div>
 </div>

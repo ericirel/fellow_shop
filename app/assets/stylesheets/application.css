@@ -92,8 +92,8 @@
 }
 .nav li{
     display:inline;
-    width:33%;
-    margin:10%;
+    width:30%;
+    margin:9%;
     padding:0;
     font-size: 1.5vw;
 
@@ -111,6 +111,7 @@
 	width: 78%;
 	margin-left: 8%;
 	margin-right: 5%;
+	padding-bottom: 1%;
 	padding-left: 1%;
 	padding-right: 1%;
 	height: 100%;

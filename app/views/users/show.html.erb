@@ -1,5 +1,6 @@
 <h1>profile page</h1>
 
+<div><%= image_tag @user.avatar.url(:thumb) %></div>
 <h3><%= @user.username %></h3>
 <h3><%= @user.email %></h3>
 <p><%= @user.fname %></p>

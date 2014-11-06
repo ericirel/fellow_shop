@@ -1,19 +1,18 @@
 class TopicsController < ApplicationController
 
 	  before_action :set_topic, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @topic = Topic.all
   end
 
-  def show 
+  def show
 
   end
 
-  def new 
+  def new
     @topic = Topic.new
   end
-
 
   def create
     @topic = Topic.new(topic_params)
@@ -36,7 +35,7 @@ class TopicsController < ApplicationController
     if @topic.update(topic_params)
       flash[:notice] = "Topic updated!"
       redirect_to @topic
-    else 
+    else
       flash[:alert] = "Something went wrong with the update."
       render :edit
     end
@@ -50,7 +49,7 @@ class TopicsController < ApplicationController
     else
       flash[:notice] = "you are not the owner of this topic"
       # redirect_to root_path
-    end  
+    end
   end
 
   private
@@ -62,5 +61,4 @@ class TopicsController < ApplicationController
   def set_topic
     @topic = Topic.find(params[:id])
   end
-
 end

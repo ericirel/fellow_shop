@@ -49,13 +49,11 @@ div {
 /* unvisited link */
 a:link {
     text-decoration: none;
-    color: white;
 }
 
 /* visited link */
 a:visited {
-    text-decoration: none;
-        color: white;	
+  text-decoration: none;
 }
 
 /* mouse over link */
@@ -69,20 +67,19 @@ a:active {
 }
 
 body {
-    // background-image: url("ny-back2.jpg");   
-   color: white;
-   background-color: black;
-  
+  /*background-image: url("ny-back2.jpg");*/
+  color: black;
+
 }
 
 body.homepage {
     background-image: url("ny-back2.jpg");
     // background-size: 80%;
     // background-attachment: fixed;
-    // background-position: 40% 40%; 
+    // background-position: 40% 40%;
     background-repeat: no-repeat;
     background-color: #FFFFFF;
-  
+
 }
 
 

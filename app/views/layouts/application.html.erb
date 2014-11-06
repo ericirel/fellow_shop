@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
 
 	<% if current_user %>
 	  <p class="logged_in">Waddup <%= current_user.username %>!? |
-	    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :style => "color:black"  %>
+	    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :style => "color:white"  %>
 	  </p>
 	<% else %>
 		<p class="logged_in">

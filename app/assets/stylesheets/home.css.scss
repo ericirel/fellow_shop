@@ -44,11 +44,13 @@ div {
 /* unvisited link */
 a:link {
     text-decoration: none;
+    color:white;
 }
 
 /* visited link */
 a:visited {
   text-decoration: none;
+  color: white;
 }
 
 /* mouse over link */
@@ -63,7 +65,7 @@ a:active {
 }
 
 body {
-  // background-image: url("ny-back2.jpg");
+  background-image: url("wood.jpg");
 }
 
 body.homepage {

@@ -1,14 +1,18 @@
-<h1>profile page</h1>
 
-<div><%= image_tag @user.avatar.url(:thumb) %></div>
-<h3><%= @user.username %></h3>
-<h3><%= @user.email %></h3>
-<p><%= @user.fname %></p>
-<p><%= @user.lname %></p>
-<p><%= @user.location %></p>
-<p><%= @user.github_link %></p>
+<div class="container">
 
-<%= link_to ">> Forum", topics_path %><br />
-<br />
-<%= link_to ">> Edit profile", edit_user_path %>
+	<h1>Your Profile Page</h1>
 
+	<div><%= image_tag @user.avatar.url(:thumb) %></div>
+	<h3><%= @user.username %></h3>
+	<h3><%= @user.email %></h3>
+	<p><%= @user.fname %></p>
+	<p><%= @user.lname %></p>
+	<p><%= @user.location %></p>
+	<p><%= @user.github_link %></p>
+
+	<%= link_to ">> Forum", topics_path, :style => "color:black"   %><br />
+	<br />
+	<%= link_to ">> Edit profile", edit_user_path, :style => "color:black"   %>
+
+</div>

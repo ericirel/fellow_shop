@@ -9,23 +9,23 @@
 </head>
 
 <body>
-	
+
 	<header>
 
 	<% if current_user %>
 	  <p class="logged_in">Waddup <%= current_user.username %>!? |
-	    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+	    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :style => "color:black"  %>
 	  </p>
 	<% else %>
 		<p class="logged_in">
-		<%= link_to 'sign in', new_user_session_path %> |
-		<%= link_to 'sign up', new_user_registration_path %>
+		<%= link_to 'sign in', new_user_session_path, :style => "color:white" %> |
+		<%= link_to 'sign up', new_user_registration_path, :style => "color:white" %>
 		</p>
 	<% end %>
 		<p class="notice"><%= notice %></p>
-    	<p class="alert"><%= alert %></p>
+    <p class="alert"><%= alert %></p>
 	<!-- <hr> -->
-	
+
 	<% if !current_page?('/') && current_user %>
 
 	<nav class="nav">
@@ -35,7 +35,7 @@
 			<li><%= link_to 'Forum', topics_path %></li>
 		</ul>
 	</nav>
-	
+
 	<% end %>
 
 

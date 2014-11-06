@@ -1,8 +1,6 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 .p-header {
 	color: white;
 	font-size: 100%;
@@ -10,14 +8,12 @@
 	z-index: 3;
 	font-size: 3.8vw;
 	font-weight: 600;
-
-
+  font-family: 'Julius Sans One';
 }
 
 .div-header {
 	// background-color: rgba(0,0,0,  .5);
-
-	z-index: -1;
+  z-index: -1;
 	margin-top: 0%;
 	margin-left: 8%;
 	padding-left: 2%;
@@ -30,8 +26,7 @@
 
 .who-are {
 	// background-color: rgba(0,0,0,  .5);
-
-	z-index: -1;
+  z-index: -1;
 	color: white;
 	margin-top: 12%;
 	margin-left: 13%;
@@ -39,8 +34,8 @@
 	width: 56%;
 	border-radius: 25px;
 	font-size: 2.5vw;
+  font-family:  'Julius Sans One';
 }
-
 
 div {
 	// border: 1px solid black;
@@ -58,7 +53,8 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-    text-decoration: underline;
+  text-decoration: none;
+  border-top: 1px solid white;
 }
 
 /* selected link */
@@ -67,9 +63,7 @@ a:active {
 }
 
 body {
-  /*background-image: url("ny-back2.jpg");*/
-  color: black;
-
+  // background-image: url("ny-back2.jpg");
 }
 
 body.homepage {
@@ -79,8 +73,7 @@ body.homepage {
     // background-position: 40% 40%;
     background-repeat: no-repeat;
     background-color: #FFFFFF;
-
-}
+  }
 
 
 

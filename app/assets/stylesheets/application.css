@@ -119,3 +119,106 @@
 	height: 100%;
 	min-height: 500px;
 }
+
+.container1{
+	background-color: rgba(255,255,255,  .75);
+	color: black;
+	width: 50%;
+	margin:0 auto;
+	padding-bottom: 1%;
+	margin-top: 2%;
+	padding-top: 2.2%;
+	height:6.5em;
+}
+
+.title{
+	text-align: center;
+}
+
+.form{
+	background-color: rgba(255,255,255,  .75);
+	color: black;
+	width: 30%;
+	margin-left: 4%;
+	margin-top: 4%;
+	padding-top: 2.2%;
+	height:20em;
+	float:left;
+}
+
+.text_area{
+	margin-left:5%;
+}
+
+.post_form {
+  width: 350px;
+  height: 240px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size:16px;
+  border: 1px solid lightgrey;
+}
+
+.submitBtn_div{
+	margin-left: 32%;
+}
+.submitBtn {
+  font-size: 20px;
+  border: 1px solid aquamarine;
+  color: white;
+  width:45%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.feed{
+	background-color: rgba(255,255,255,  .75);
+	color: black;
+	width: 58%;
+	margin-left: 4%;
+	margin-top: 4%;
+	padding-top: 2.2%;
+	height:auto;
+	min-height: 20em;
+	float:left;
+}
+
+#feed_title{
+	width:95%;
+	height:5em;
+	text-align: center;
+	margin:0 auto;
+	padding-top:.25em;
+	background-color: white;
+	border-radius: 5px;
+}	
+
+.comment_form{
+  width: 500px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  font-size: 14px;
+  margin-left:20%;
+}
+
+.commentBtn{
+  font-size: 12px;
+  border: 1px solid aquamarine;
+  color: white;
+  width:17%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card{
+	width:95%;
+	height:auto;
+	background-color:aquamarine;
+	margin-top:2em;
+	margin:left 2%;
+	margin-right: 2%;
+	border-radius: 5px;
+}
+

@@ -1,10 +1,4 @@
-<div class="container">
-<h1>Welcome to the <%= @topic.body %> board</h1>
-
-	<%= render 'form' %>
-
 <ul>
-<% @posts = Post.all %>
 <% @posts.each do |post| %>
 
 	<li><%= post.body %></li>
@@ -20,12 +14,10 @@
   <%end%>
 
   <%= form_for Comment.new, url: post_comments_path(post.id) do |f| %>
-    <%= f.text_field :body %> 
+    <%= f.label :body %>
+    <%= f.text_field :body %> <br />
     <%= f.submit %>
   <% end %>
 
 <%end%>
 </ul>
-</div>
-
-

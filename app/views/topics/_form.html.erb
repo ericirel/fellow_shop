@@ -1,6 +1,5 @@
-<%= form_for @topic do |f| %>
+<%= form_for Post.new do |f| %>
 
-  <%= f.label :body %>
-  <%= f.text_area :body %> <br />
-  <%= f.submit %>
+  <div class="text_area"><%= f.text_area :body, class: "post_form", autofocus: true, placeholder: "Make a Post ...", :size=> "44x6" %></div> <br />
+  <div class="submitBtn_div"><%= f.submit class: "submitBtn", cursor: "pointer" %></div>
 <% end %>

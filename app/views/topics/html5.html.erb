@@ -1,10 +1,39 @@
-<div class="container">
-<h1>Edit your post here!</h1>
-      <%= form_for @post do |f| %>
-        <p><%= f.text_area :body, class: 'post-form', autofocus: true, placeholder: 'Make a post...' %></p>
-        <p><%= f.submit class: "submit-btn", cursor: "pointer"%></p>
-    <% end %>
-   	<div>
-    </div>
+<div class="container1">
+  <div class="title"><h1>Welcome to the HTML5 board</h1></div>
+</div>
+<div class="form">
+	<%= render 'form' %>
+</div>
 
+<div class="feed">
+<div id="feed_title"><h1>Feed</h1></div>
+<hr />
+<ul>
+<% @posts = Post.all %>
+<% @posts.each do |post| %>
+
+	<li><%= post.body %><br />
+  <%= post.created_at.strftime("(posted at %I:%M%p on %m/%d/%Y by
+   #{post.user.username})") %>
+  </li>
+
+
+ 		<% post.comments.each do |comment| %><br/>
+      
+  		<li>
+        <%= comment.body %><br />
+        <%= comment.created_at.strftime("(commented at %I:%M%p on %m/%d/%Y by
+         #{comment.user.username})") %>
+      </li>
+      <br/>
+  	
+  <%end%>
+
+  <%= form_for Comment.new, url: post_comments_path(post.id) do |f| %>
+    <%= f.text_area :body %> 
+    <%= f.submit %>
+  <% end %>
+
+<%end%>
+</ul>
 </div>

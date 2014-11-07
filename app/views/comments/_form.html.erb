@@ -1,0 +1,11 @@
+<%= form_for [@comment, @post], :url => user_post_url(@comment) do |f| %>
+	<%= f.string :body %> <br />
+	<%= f.submit %>
+<%end%>
+
+<%= form_for @comment do |f| %>
+
+  <%= f.label :body %>
+  <%= f.text_area :body %> <br />
+  <%= f.submit %>
+<% end %>

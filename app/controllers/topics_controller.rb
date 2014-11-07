@@ -31,6 +31,10 @@ class TopicsController < ApplicationController
 
   end
 
+  def html5
+
+  end
+
   def update
     if @topic.update(topic_params)
       flash[:notice] = "Topic updated!"

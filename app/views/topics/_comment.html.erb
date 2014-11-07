@@ -1,0 +1,12 @@
+<li class="comments">
+  <div>
+    <span class="comments-name"><%= image_tag comment.user.avatar.url(:small) %> | <%= link_to comment.user.fullname, user_path(comment.user.id) %></span>
+    <span class="comments-text"><%= comment.body %></span><br/>
+    <span class="time-text">
+      <%= comment.created_at.strftime("(commented at %I:%M%p on %m/%d/%Y)") %>
+      <% if current_user == comment.user %>
+      <%= link_to 'delete', post_comment_path(post, comment), method: :delete,data: {confirm: "Are you sure you want to delete this comment?"}, class: "delete-btn" %>
+      <%end%>
+    </span>
+  </div>
+</li>

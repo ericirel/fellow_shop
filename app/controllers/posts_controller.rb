@@ -1,21 +1,29 @@
 class PostsController < ApplicationController
-	  before_action :set_post, only: [:show, :edit, :update, :destroy, :new]
+	  before_action :set_post, only: [:html5, :show, :edit, :update, :destroy]
+  
+  def index
+    @posts = Post.all
+  end
 
-	def new
-	  @post = Post.new
-	end
+  def show 
+  end
+
+  def new 
+    @post = Post.new
+  end
 
   def create
-    @post = Post.new
+    @post = Post.new(post_params)
 
-    unless params[:post][:body].empty?
-      @post.body = params[:post][:body]
-      @post.user_id = current_user.id
-      # @post.comment_id = params[:post_id]
+    unless post_params[:body].empty?
       @post.save
+      flash[:notice] = "New post created!"
+      redirect_to topics_html5_path
+    else
+      flash[:notice] = "Sorry - a post was not made!"
     end
 
-    redirect_to topics_path
+    
   end
 
   def edit
@@ -24,25 +32,29 @@ class PostsController < ApplicationController
   def update
     if @post.update(post_params)
       flash[:notice] = "Post updated!"
-      redirect_to topics_path
-    else
+      redirect_to @post
+    else 
       flash[:alert] = "Something went wrong with the update."
-      render topics_path
+      render :edit
     end
   end
 
   def destroy
-    if current_user.id == @post.user.id
+      if current_user.id == @post.user.id
       @post.destroy
       flash[:notice] = "Post was deleted."
-      redirect_to topics_path
+      redirect_to :back
     else
-      flash[:notice] = "You are not the owner of this post"
-      redirect_to topics_path
-    end
+      flash[:notice] = "you are not the owner of this post"
+      redirect_to :back
+    end  
   end
 
   private
+
+  def post_params
+    params.require(:post).permit(:body).merge(user_id: current_user.id)
+  end
 
   def set_post
     @post = Post.find(params[:id])

@@ -1,0 +1,39 @@
+<div class="post-container">
+  <li class="posts">
+
+    <% if current_user == post.user %>
+    <p class="post-delete">
+          <%= link_to 'x', post, method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
+    </p>
+    <%end%>
+
+
+    <span class="post-user-name">
+      <%= image_tag post.user.avatar.url(:small) %> |
+      <%= link_to post.user.fullname, user_path(post.user.id) %>
+    </span>
+
+    <span class="time-text">
+      <%= post.created_at.strftime("posted at %I:%M%p on %m/%d/%Y") %>
+    </span>
+
+    <p>
+      <%= post.body %>
+    </p>
+
+    <ul class="comment-list">
+      <% post.comments.each do |comment| %>
+        <%= render partial: 'comment', locals: { comment: comment, post: post } %>
+      <%end%>
+    </ul>
+    
+    <div class="comment-form">
+      <%= form_for Comment.new, url: post_comments_path(post.id) do |f| %>
+        <div class="comment-form">
+          <div><%= f.text_area :body, class: 'form-control', autofocus: true, placeholder: 'Write a comment...' %></div>
+          <div class="btn-wrapper"><%= f.submit 'Submit', class: 'submit-btn', cursor: "pointer" %></div>
+        </div>
+      <% end %>
+    </div>
+  </li>
+</div>

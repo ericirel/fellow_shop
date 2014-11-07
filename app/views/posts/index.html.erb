@@ -1,0 +1,23 @@
+<ul>
+<% @posts.each do |post| %>
+
+	<li><%= post.body %></li>
+
+
+ 		<% post.comments.each do |comment| %><br/>
+      
+  		<li>
+        <%= comment.body %>
+      </li>
+      <br/>
+  	
+  <%end%>
+
+  <%= form_for Comment.new, url: post_comments_path(post.id) do |f| %>
+    <%= f.label :body %>
+    <%= f.text_field :body %> <br />
+    <%= f.submit %>
+  <% end %>
+
+<%end%>
+</ul>

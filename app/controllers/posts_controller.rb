@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	  before_action :set_post, only: [:html5, :show, :edit, :update, :destroy]
+	  before_action :set_post, only: [ :show, :edit, :update, :destroy]
   
   def index
     @posts = Post.all
@@ -48,6 +48,11 @@ class PostsController < ApplicationController
       flash[:notice] = "you are not the owner of this post"
       redirect_to :back
     end  
+  end
+
+  def html5
+    @post = Post.find(params[:id])
+    redirect_to posts_html5_path
   end
 
   private

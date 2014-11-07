@@ -1,12 +1,11 @@
 <div class="container">
-<<<<<<< HEAD
 <h1>Edit your post here!</h1>
       <%= form_for Post.new do |f| %>
         <p><%= f.text_area :body, class: 'post-form', autofocus: true, placeholder: 'Make a post...' %></p>
         <p><%= f.submit class: "submit-btn", cursor: "pointer"%></p>
-      <% end %>
-=======
-<h1>Chatter about HTML 5 HERE!</h1>
->>>>>>> b4fd39326e95a1e1c4849b240048c39cdbb45ffe
+    <% end %>
+    <div>
+    	<%= @post.body %>
+    </div>
 
 </div>

@@ -12,12 +12,12 @@ Rails.application.routes.draw do
   resources :tags
   resources :users
 
-  get 'topics/html5' 
-  get 'topics/css3'
-  get 'topics/js'
-  get 'topics/ruby'
-  get 'topics/rails'
-  get 'topics/everythingelse'
+  get 'posts/html5' 
+  get 'posts/css3'
+  get 'posts/js'
+  get 'posts/ruby'
+  get 'posts/rails'
+  get 'posts/everythingelse'
 
   resources :topics
 

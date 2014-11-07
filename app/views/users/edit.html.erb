@@ -4,11 +4,11 @@
   <%= form_for @user do |f| %>
     <div class ="profile">
       <div>
-        <%= image_tag @user.avatar.url(:medium) %><br>    
+        <%= image_tag @user.avatar.url(:medium) %><br>
         <%= f.file_field :avatar %>
       </div>
     </div>
-    
+
     <div class ="profile1">
       <div><%= f.label :username %><br />
       <%= f.text_field :username%>
@@ -34,8 +34,7 @@
       <%= f.submit "             Update             " %>
     </div>
     <% end %>
-   
-      <%= button_to "Delete My Account", user_registration_path, data: { confirm: "Are you sure?" }, :method => :delete %>
 
+      <%= button_to "Delete My Account", user_registration_path, data: { confirm: "Are you sure?" }, :method => :delete %>
 
 </div>

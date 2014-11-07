@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
     def subscribe_to_list
         Resque.enqueue(MailchimpSubscriber, self.id)
     end
-  
+
 
 
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"

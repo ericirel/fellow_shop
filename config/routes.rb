@@ -4,13 +4,13 @@ Rails.application.routes.draw do
     get "users/sign_out", to: "home#index"
   end
 
-
   devise_for :users, :controllers => { :registrations => "registrations" }
 
   resources :users
   resources :jobs
   resources :tags
   resources :users
+
 
   # get 'posts/html5' 
   # get 'posts/css3'
@@ -20,6 +20,18 @@ Rails.application.routes.draw do
   # get 'posts/everythingelse'
 
   resources :topics
+
+  get 'topics/html5'
+  get 'topics/css3'
+  get 'topics/js'
+  get 'topics/ruby'
+  get 'topics/rails'
+  get 'topics/everythingelse'
+
+  resources :topics do
+    resources :posts, except: [:index, :show]
+  end
+
 
   resources :posts do
     resources :comments, except: [:index, :new, :show]

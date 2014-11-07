@@ -26,18 +26,19 @@ class UsersController < ApplicationController
 	end
 
 	def create
-  		@user = User.create( user_params )
+  	@user = User.create( user_params )
 	end
 
 	def destroy
+		@user = User.find(params[:id])
 		if @user.destroy
-			flash[:notice] = "Account deleted. BYE BYE"
 			redirect_to root_path
-		else 
+		else
 			flash[:alert] = "Could not delete. Sorry"
 			redirect_to users_path
-		end	
-	end	
+		end
+	end
+
 private
 
 	def user_params
@@ -53,5 +54,4 @@ end
 def subscribe
   @user = User.find(params[:id])
   @user.subscribe_to_mailchimp(true)
-  # redirect to some other url
 end

@@ -11,15 +11,15 @@
 <% @posts = Post.all %>
 <% @posts.each do |post| %>
  <div class="card"> 
-	<%= post.body %><br />
-  <%= post.created_at.strftime("(posted at %I:%M%p on %m/%d/%Y by
-   #{post.user.username})") %>
+	<div class="post"><%= post.body %></div><br />
+  <div class="time"><%= post.created_at.strftime("posted at %I:%M%p on %m/%d/%Y by
+   #{post.user.username}")%></div>
   
     <% post.comments.each do |comment| %><br />
       
-  	<%= comment.body %><br />
-    <%= comment.created_at.strftime("(commented at %I:%M%p on %m/%d/%Y by
-         #{comment.user.username})") %>
+  	<div class="post"><%= comment.body %></div><br />
+    <div class="time"><%= comment.created_at.strftime("commented at %I:%M%p on %m/%d/%Y by
+         #{comment.user.username}")%></div>
   <%end%>
 
     <%= form_for Comment.new, url: post_comments_path(post.id) do |f| %>

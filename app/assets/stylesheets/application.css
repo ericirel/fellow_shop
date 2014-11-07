@@ -151,8 +151,8 @@
 }
 
 .post_form {
-  width: 250px;
-  height: 30px;
+  width: 350px;
+  height: 240px;
   border-radius: 5px;
   padding: 5px;
   font-size:16px;
@@ -164,7 +164,6 @@
 }
 .submitBtn {
   font-size: 20px;
-  background: lightgrey;
   border: 1px solid aquamarine;
   color: white;
   width:45%;
@@ -185,10 +184,41 @@
 }
 
 #feed_title{
-	width:100%;
+	width:95%;
 	height:5em;
 	text-align: center;
-	margin-top:-3%;
-	padding-top: -2%;
+	margin:0 auto;
+	padding-top:.25em;
+	background-color: white;
+	border-radius: 5px;
+}	
+
+.comment_form{
+  width: 500px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  font-size: 14px;
+  margin-left:20%;
+}
+
+.commentBtn{
+  font-size: 12px;
+  border: 1px solid aquamarine;
+  color: white;
+  width:17%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card{
+	width:95%;
+	height:auto;
+	background-color:aquamarine;
+	margin-top:2em;
+	margin:left 2%;
+	margin-right: 2%;
+	border-radius: 5px;
 }
 

@@ -45,6 +45,11 @@
     s.parentNode.insertBefore(wf, s);
   })(); </script>
 
-$("img").error(function(){
-        $(this).hide();
+$(window).load(function() { 
+   $("img").each(function(){ 
+      var image = $(this); 
+      if(image.context.naturalWidth == 0 || image.readyState == 'uninitialized'){  
+         $(image).unbind("error").hide();
+      } 
+   }); 
 });

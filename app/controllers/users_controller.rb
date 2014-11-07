@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
 	def update
 		@user = User.find(params[:id])
-		if @user.update(user_params)
+		if @user && @user.update(user_params)
 			flash[:notice] = "Profile updated"
 			redirect_to current_user
 		else
@@ -32,6 +32,7 @@ class UsersController < ApplicationController
 	def destroy
 		@user = User.find(params[:id])
 		if @user.destroy
+			flash[:alert] = "Deleted!!!!!!!"
 			redirect_to root_path
 		else
 			flash[:alert] = "Could not delete. Sorry"

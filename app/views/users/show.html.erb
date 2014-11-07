@@ -3,16 +3,26 @@
 
 	<h1>Your Profile Page</h1>
 
-	<div><%= image_tag @user.avatar.url(:thumb) %></div>
-	<h3><%= @user.username %></h3>
-	<h3><%= @user.email %></h3>
-	<p><%= @user.fname %></p>
-	<p><%= @user.lname %></p>
-	<p><%= @user.location %></p>
-	<p><%= @user.github_link %></p>
+	<div class="profile">
 
-	<%= link_to ">> Forum", topics_path, :style => "color:black"   %><br />
-	<br />
-	<%= link_to ">> Edit profile", edit_user_path, :style => "color:black"   %>
+		<%= image_tag @user.avatar.url(:medium) %>
 
+	</div>
+	
+	<div class="profile1">
+		<%= link_to "Edit profile", edit_user_path, :style => "color:darkblue" %>
+		<h2>Hiya <%= @user.username %></h2>
+		
+	
+		<h3><%= @user.email %></h3>
+	
+		<p><strong>First Name: </strong><%= @user.fname %></p>
+		<p><strong>Last Name: </strong><%= @user.lname %></p>
+		<p><strong>Location: </strong><%= @user.location %></p>
+		<p><strong>GitHub: </strong><%= @user.github_link %></p>
+
+
+		<%= button_to "Delete my account", data: { confirm: "Are you sure?" }, method: :destroy %>
+
+	</div>
 </div>

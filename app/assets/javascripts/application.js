@@ -45,3 +45,6 @@
     s.parentNode.insertBefore(wf, s);
   })(); </script>
 
+$("img").error(function(){
+        $(this).hide();
+});

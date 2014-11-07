@@ -12,9 +12,9 @@
 <body>
 
 	<header>
-
+ 
 	<% if current_user %>
-	  <p class="logged_in">Waddup <%= current_user.username %>!? | <%= link_to 'Home', user_path(current_user) %> |
+	  <p class="logged_in"><%= image_tag current_user.avatar.url(:small) %> Waddup <%= current_user.username %>!? | <%= link_to 'Home', user_path(current_user) %> |
 	    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :style => "color:white"  %>
 	  </p>
 	<% else %>

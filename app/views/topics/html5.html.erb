@@ -1,11 +1,10 @@
 <div class="container">
 <h1>Edit your post here!</h1>
-      <%= form_for Post.new do |f| %>
+      <%= form_for @post do |f| %>
         <p><%= f.text_area :body, class: 'post-form', autofocus: true, placeholder: 'Make a post...' %></p>
         <p><%= f.submit class: "submit-btn", cursor: "pointer"%></p>
     <% end %>
-    <div>
-    	<%= @post.body %>
+   	<div>
     </div>
 
 </div>

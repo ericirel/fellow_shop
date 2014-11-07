@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def new 
-    @post = Post.new
+    @post = Post.new(params[:post])
   end
 
   def create
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     unless post_params[:body].empty?
       @post.save
       flash[:notice] = "New post created!"
-      redirect_to topics_html5_path
+      redirect_to :back
     else
       flash[:notice] = "Sorry - a post was not made!"
     end
@@ -51,8 +51,11 @@ class PostsController < ApplicationController
   end
 
   def html5
-    @post = Post.find(params[:id])
-    redirect_to posts_html5_path
+    @posts = Post.all
+  end
+
+  def css3
+
   end
 
   private

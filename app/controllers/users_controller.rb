@@ -30,10 +30,14 @@ class UsersController < ApplicationController
 	end
 
 	def destroy
-		redirect_to destroy_user_session_path
-
-	end
-
+		if @user.destroy
+			flash[:notice] = "Account deleted. BYE BYE"
+			redirect_to root_path
+		else 
+			flash[:alert] = "Could not delete. Sorry"
+			redirect_to users_path
+		end	
+	end	
 private
 
 	def user_params

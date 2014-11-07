@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 	end
 
 	def edit
+		@user = User.find(params[:id])
 	end
 
 	def show
@@ -50,7 +51,7 @@ private
 	end
 end
 
-# def subscribe
-#   @user = User.find(params[:id])
-#   @user.subscribe_to_mailchimp(true)
-# end
+def subscribe
+  @user = User.find(params[:id])
+  @user.subscribe_to_mailchimp(true)
+end

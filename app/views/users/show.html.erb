@@ -10,7 +10,7 @@
 	</div>
 
 	<div class="profile1">
-		<%= link_to "Edit profile", edit_user_path, :style => "color:darkblue" %>
+		<%= link_to "Edit Profile / Settings", edit_user_path, :style => "color:darkblue" %>
 		<h2>Hiya <%= @user.username %></h2>
 
 
@@ -21,9 +21,8 @@
 		<p><strong>Location: </strong><%= @user.location %></p>
 		<p><strong>GitHub: </strong><%= @user.github_link %></p>
 
-    <%= link_to "Edit Profile / Settings", edit_user_registration_path, :style => "color:darkblue" %>
+    
     <%= button_to "Delete my account", user_registration_path, data: { confirm: "Are you sure?" }, :method => :delete %>
-		<%= link_to "Edit Profile / Settings", edit_user_path, :style => "color:darkblue" %>
-
+		
 	</div>
 </div>

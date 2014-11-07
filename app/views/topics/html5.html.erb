@@ -1,4 +1,32 @@
-<div class="container">
-<h1>Chatter about HTML 5 HERE!</h1>
+<div class="container1">
+  <div class="title"><h1>Welcome to the HTML5 board</h1></div>
+</div>
+<div class="form">
+	<%= render 'form' %>
+</div>
+
+<div class="feed">
+<div id="feed_title"><h1>Feed</h1></div>
+
+<% @posts = Post.all %>
+<% @posts.each do |post| %>
+ <div class="card"> 
+	<%= post.body %><br />
+  <%= post.created_at.strftime("(posted at %I:%M%p on %m/%d/%Y by
+   #{post.user.username})") %>
+  
+    <% post.comments.each do |comment| %><br />
+      
+  	<%= comment.body %><br />
+    <%= comment.created_at.strftime("(commented at %I:%M%p on %m/%d/%Y by
+         #{comment.user.username})") %>
+  <%end%>
+
+    <%= form_for Comment.new, url: post_comments_path(post.id) do |f| %>
+    <%= f.text_area :body, class: "comment_form", autofocus: true, placeholder: "Comment..." %> 
+    <%= f.submit class: "commentBtn" %>
+  <% end %>
+  </div>
+<%end%>
 
 </div>

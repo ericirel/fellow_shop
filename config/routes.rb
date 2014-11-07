@@ -18,10 +18,13 @@ Rails.application.routes.draw do
   get 'topics/rails'
   get 'topics/everythingelse'
 
-  resources :topics do
-    resources :posts, except: [:index, :show]
-  end
 
+  resources :topics
+
+
+  resources :posts do
+    resources :comments, except: [:index, :new, :show]
+  end
 
 
   root 'home#index'

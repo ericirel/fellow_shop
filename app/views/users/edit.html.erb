@@ -10,32 +10,35 @@
     </div>
     
     <div class ="profile1">
-      <div><%= f.label :username %><br />
-      <%= f.text_field :username%>
+      <div>
+        <%= f.label :username %><br />
+        <%= f.text_field :username%>
       </div>
 
       <div><%= f.label :email %><br />
-      <%= f.email_field :email%>
+        <%= f.email_field :email%>
       </div>
 
       <div><%= f.label :first_name %><br />
-      <%= f.text_field :fname %>
+        <%= f.text_field :fname %>
       </div>
       <div><%= f.label :last_name %><br />
-      <%= f.text_field :lname %>
+        <%= f.text_field :lname %>
       </div>
       <div><%= f.label :location %><br />
-      <%= f.text_field :location %>
+        <%= f.text_field :location %>
       </div>
       <div><%= f.label :github_link %></br>
-      <%= f.url_field :github_link %>
+        <%= f.url_field :github_link %>
       </div>
-      <div><br>
-      <%= f.submit "             Update             " %>
+      <div>
+        <br>
+        <%= f.submit "             Update             " %>
+      </div>  
     </div>
-    <% end %>
+    <br>
+    <br>
+  <% end %>
    
-      <%= button_to "Delete My Account", user_registration_path, data: { confirm: "Are you sure?" }, :method => :delete %>
-
-
+      <%= button_to "Delete My Account    :( ", user_registration_path, data: { confirm: "Are you sure?" }, :method => :delete %>
 </div>

@@ -15,7 +15,7 @@
   <ul>
     <% @tags.each do |tag| %>
       <% tag.jobs.each do |job| %>
-        <li><%= link_to job.title, tag_path(tag) %></li>
+        <li><%= link_to tag.name, tag_path(tag) %></li>
       <% end  %>
     <% end %>
   </ul>

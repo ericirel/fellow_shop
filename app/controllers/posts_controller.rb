@@ -1,14 +1,14 @@
 class PostsController < ApplicationController
 	  before_action :set_post, only: [ :show, :edit, :update, :destroy]
-  
+
   def index
     @posts = Post.all
   end
 
-  def show 
+  def show
   end
 
-  def new 
+  def new
     @post = Post.new(params[:post])
   end
 
@@ -22,8 +22,6 @@ class PostsController < ApplicationController
     else
       flash[:notice] = "Sorry - a post was not made!"
     end
-
-    
   end
 
   def edit
@@ -33,7 +31,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       flash[:notice] = "Post updated!"
       redirect_to @post
-    else 
+    else
       flash[:alert] = "Something went wrong with the update."
       render :edit
     end
@@ -47,7 +45,7 @@ class PostsController < ApplicationController
     else
       flash[:notice] = "you are not the owner of this post"
       redirect_to :back
-    end  
+    end
   end
 
   def html5

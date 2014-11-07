@@ -7,7 +7,6 @@ class UsersController < ApplicationController
 	end
 
 	def edit
-		set_user
 	end
 
 	def show

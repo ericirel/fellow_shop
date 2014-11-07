@@ -26,12 +26,16 @@ class UsersController < ApplicationController
 	end
 
 	def create
-  		@user = User.create( user_params )
+  	@user = User.create( user_params )
 	end
 
 	def destroy
-		redirect_to destroy_user_session_path
-
+			if @user.destroy
+			redirect_to root_path
+		else
+			flash[:alert] = "Could not delete. Sorry"
+			redirect_to users_path
+		end
 	end
 
 private

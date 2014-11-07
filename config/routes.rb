@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     get "users/sign_out", to: "home#index"
   end
 
-
   devise_for :users, :controllers => { :registrations => "registrations" }
 
   resources :users
@@ -12,7 +11,7 @@ Rails.application.routes.draw do
   resources :tags
   resources :users
 
-  get 'topics/html5' 
+  get 'topics/html5'
   get 'topics/css3'
   get 'topics/js'
   get 'topics/ruby'

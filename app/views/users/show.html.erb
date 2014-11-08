@@ -20,8 +20,7 @@
 		<p><strong>Location: </strong><%= @user.location %></p>
 		<p><strong>GitHub: </strong><%= @user.github_link %></p>
 
-    
-    <%= button_to "Delete my account", user_registration_path, data: { confirm: "Are you sure?" }, :method => :delete %>
-		
+		<%= button_to "Delete my account", user_registration_path, data: { confirm: "Are you sure?" }, :method => :delete %>
+
 	</div>
 </div>

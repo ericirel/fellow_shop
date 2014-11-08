@@ -1,6 +1,6 @@
 class TopicsController < ApplicationController
 
-	  before_action :set_topic, only: [:edit, :update, :destroy]
+	 before_action :set_topic, only: [:edit, :update, :destroy]
 
   def index
     @topic = Topic.all
@@ -50,7 +50,7 @@ class TopicsController < ApplicationController
       # redirect_to root_path
     end
   end
-  
+
   private
 
   def topic_params

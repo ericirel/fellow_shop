@@ -3,16 +3,16 @@
 <div class="container">
 <body>
 	<h1><%= @job.title %></h1>
-	<p><%= @job.skills %></p>
-	<p><%= @job.description %></p>
-	<p><%= @job.budget %></p>
+  <p><h3>Description: </h3><%= @job.description %></p>
+	<p><h3>Skills: </h3><%= @job.skills %></p>
+	<p><h3>Salary: </h3>$ <%= @job.budget %></p>
 	<p>
-  Tags:
+  <h3>Tags: </h3>
   <% @job.tags.each do |tag| %>
   <%= link_to tag.name, tag_path(tag) %>
   <% end %>
 </p>
-<%= link_to ">> Job list", jobs_path, :style => "color:black" %>
+<%= link_to "// Job list", jobs_path, :style => "color:black" %>
 </body>
 </div>
 

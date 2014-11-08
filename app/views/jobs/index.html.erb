@@ -1,7 +1,12 @@
 <div class="container">
+  <%= link_to "// Create a New Job posting", new_job_path, :style => "color:black", class: "new_job" %>
 
+  <%= form_tag jobs_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
   <h1>All Jobs</h1>
-
   <ul>
     <% @jobs.each do |job| %>
     <li>
@@ -20,12 +25,6 @@
     <% end %>
   </ul>
 
-  <%= link_to "// Create a New Job posting", new_job_path, :style => "color:black", class: "new_job" %>
 
-  <%= form_tag jobs_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
   <% end %>
 </div>

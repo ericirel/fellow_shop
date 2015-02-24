@@ -1,7 +1,7 @@
 <div class="container">
   <%= link_to "// Create a New Job posting", new_job_path, :style => "color:black", class: "new_job" %>
 
-  <%= form_tag jobs_path, :method => 'get' do %>
+  <%= form_tag tag_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>

@@ -44,10 +44,8 @@ class TopicsController < ApplicationController
       if current_user.id == @topic.user.id
       @topic.destroy
       flash[:notice] = "Topic was deleted."
-      # redirect_to root_path
     else
       flash[:notice] = "you are not the owner of this topic"
-      # redirect_to root_path
     end
   end
 

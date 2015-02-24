@@ -14,6 +14,10 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 	end
 
+	def new
+		@user = User.new
+	end
+
 	def update
 		@user = User.find(params[:id])
 		if @user && @user.update(user_params)
@@ -43,8 +47,8 @@ class UsersController < ApplicationController
 private
 
 	def user_params
-  		params.require(:user).permit(:avatar, :github_link, :username, :fname,
-  							:lname, :email, :password, :location)
+   params.require(:user).permit(:avatar, :github_link, :username, :fname,
+   								:lname, :email, :password, :location)
 	end
 
 	def set_user

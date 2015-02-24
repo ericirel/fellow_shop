@@ -14,16 +14,14 @@
  *= require_self
  */
 
-.log_in_style {
-  color:white;
-  text-decoration: none;
-}
-
-
-
 * {
 	/*font-family: sans-serif;*/
 	font-family: 'Lora', serif;
+}
+
+.log_in_style {
+  color:white;
+  text-decoration: none;
 }
 
 .logged_in {
@@ -32,18 +30,15 @@
 	text-align: right;
 	padding-right: 2%;
   text-decoration: none;
-
 }
 
 .log_in_box {
 	height: 300px;
 	padding-top: 150px;
 	width: 80%;
-    margin: 0 auto;
+  margin: 0 auto;
 	border-radius: 25px;
 }
-
-
 
 /*Log in CSS*/
 .log_in {
@@ -52,22 +47,18 @@
 	font-size: 1em;
 	text-align: center;
 	background-color: rgba(1,1,1,  .5);
-
-	width: 30%;
-    margin: 0 auto;
+  width: 30%;
+  margin: 0 auto;
 	border-radius: 25px;
 }
-
 
 .sign_up_box {
 	height: 400px;
 	padding-top: 150px;
 	width: 80%;
-    margin: 0 auto;
+  margin: 0 auto;
 	border-radius: 25px;
 }
-
-
 
 /*Log in CSS*/
 .sign_up {
@@ -76,13 +67,12 @@
 	font-size: 1em;
 	text-align: center;
 	background-color: rgba(1,1,1,  .5);
-
-	width: 30%;
+  width: 30%;
   margin: 0 auto;
 	border-radius: 25px;
 }
 
-.nav{
+.nav {
     border:1px solid #ccc;
     border-width:1px 0;
     list-style: none;
@@ -90,7 +80,8 @@
     padding:0;
     text-align: center;
 }
-.nav li{
+
+.nav li {
     display:inline;
     width:30%;
     margin:9%;
@@ -98,7 +89,8 @@
     font-size: 1.5vw;
 
 }
-.nav a{
+
+.nav a {
     display:inline-block;
     padding:2px;
 	  font-family: 'Lora', serif;
@@ -120,7 +112,7 @@
 	min-height: 500px;
 }
 
-.container1{
+.container1 {
 	background-color: rgba(255,255,255,  .75);
 	color: black;
 	width: 50%;
@@ -131,11 +123,11 @@
 	height:6.5em;
 }
 
-.title{
+.title {
 	text-align: center;
 }
 
-.form{
+.form {
 	background-color: rgba(255,255,255,  .75);
 	color: black;
 	width: 30%;
@@ -146,7 +138,7 @@
 	float:left;
 }
 
-.text_area{
+.text_area {
 	margin-left:2em;
 }
 
@@ -159,9 +151,10 @@
   border: 1px solid lightgrey;
 }
 
-.submitBtn_div{
+.submitBtn_div {
 	margin-left: 32%;
 }
+
 .submitBtn {
   font-size: 20px;
   border: 1px solid aquamarine;
@@ -171,7 +164,7 @@
   text-align: center;
 }
 
-.feed{
+.feed {
 	background-color: rgba(255,255,255,  .75);
 	color: black;
 	width: 58%;
@@ -183,7 +176,7 @@
 	float:left;
 }
 
-#feed_title{
+#feed_title {
 	width:95%;
 	height:5em;
 	text-align: center;
@@ -191,9 +184,9 @@
 	padding-top:.25em;
 	background-color: white;
 	border-radius: 5px;
-}	
+}
 
-.card{
+.card {
 	width:95%;
 	height:auto;
 	background-color:aquamarine;
@@ -203,13 +196,13 @@
 	padding-top:2em;
 }
 
-.post{
+.post {
 	width:53%;
 	height:auto;
 	margin-left: 2em;
 }
 
-.comment_form{
+.comment_form {
   width: 450px;
   height: 75px;
   border-radius: 5px;
@@ -220,7 +213,7 @@
   margin-top: 2em;
 }
 
-.commentBtn{
+.commentBtn {
   font-size: 12px;
   border: 1px solid aquamarine;
   color: white;
@@ -230,7 +223,7 @@
   margin-bottom: 2em;
 }
 
-.time{
+.time {
 	text-align: right;
 	font-size: 12px;
 	color:gray;

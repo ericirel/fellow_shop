@@ -1,1 +1,4 @@
 Welcome to the Fellow Shop
+
+Post-graduate community where WDI alumni can share their new Web Development experiences and keep in touch.
+Discuss jobs, best practices, new technologies, etc in the forums.
